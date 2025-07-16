@@ -22,7 +22,7 @@ def generate_text():
     base_text: str = "DeepSeek 128K上下文测试文本。此段落重复填充以达到长度要求。" * 100  # 基础重复文本
     full_text: str = ""
     current_tokens: int = 0
-    target_tokens: int = 64 * 1024  # 128K tokens
+    target_tokens: int = 128 * 1024  # 128K tokens
 
     # 插入标记
     for marker, pos in markers.items():
