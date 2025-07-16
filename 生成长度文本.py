@@ -19,10 +19,10 @@ markers: dict = {
 
 # 3. 生成文本的函数
 def generate_text():
-    base_text: str = "DeepSeek 128K上下文测试文本。此段落重复填充以达到长度要求。" * 100  # 基础重复文本
+    base_text: str = "DeepSeek 64K上下文测试文本。此段落重复填充以达到长度要求。" * 100  # 基础重复文本
     full_text: str = ""
     current_tokens: int = 0
-    target_tokens: int = 128 * 1024  # 128K tokens
+    target_tokens: int = 64 * 1024  # 64K tokens
 
     # 插入标记
     for marker, pos in markers.items():
@@ -44,9 +44,9 @@ def generate_text():
 def main():
     # 4. 生成并保存文件
     text: str = generate_text()
-    with open(file="128k_context_test.txt", mode="w") as f:
+    with open(file="64k_context_test.txt", mode="w") as f:
         f.write(text)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
